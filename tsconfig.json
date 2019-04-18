@@ -1,9 +1,12 @@
 {
-  "compilerOptions": {
-    "target": "es5",                          
-    "outDir" : "./build/",
-    "module": "commonjs",                     
-    "strict": true,                           
-    "esModuleInterop": true                   
-  }
+    "compilerOptions": {
+        "target": "es2015",
+        "outDir" : "./build/",
+        "module": "commonjs",                     
+        "strict": true,                           
+        "declaration": true,
+        "esModuleInterop": true
+    },
+    "include": ["src/"],
+    "exclude": ["node_modules"]
 }
