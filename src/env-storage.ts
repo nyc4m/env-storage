@@ -21,7 +21,7 @@ export class EnvStorage {
      * @param variableName the name of the env variable to look for
      * @param alias an alias to access it during the execution ;)
      */
-    add(variableName: string, alias: string): void{
+    add(variableName: string, alias?: string): void{
         this.envVariables.push(variableName);
         if(alias != undefined) {
             this.alias.set(alias, variableName);
