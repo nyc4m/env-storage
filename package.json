@@ -2,7 +2,7 @@
   "name": "env-storage",
   "version": "1.0.1",
   "description": "Little library to handle environment variables",
-  "main": "index.js",
+  "main": "build/env-storage.js",
   "author": "Baptiste Prunot",
   "license": "MIT",
   "private": false,
