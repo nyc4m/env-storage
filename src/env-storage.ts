@@ -5,25 +5,27 @@
  */
 export class EnvStorage {
 
-    private envVariables: string[];
-    private nameAndValues: Map<string, string>;
+    private alias: Map<string, string> = new Map();
 
-    private static readonly instance = new EnvStorage();
-
-    static get Instance(): EnvStorage {
-        return this.instance;
+    addAlias(name: string, alias: string): EnvStorage {
+        this.alias.set(name, alias) ;
+        return this;
     }
 
-    private constructor() {
-        this.envVariables = [];
-        this.nameAndValues = new Map();
-    }
+    private envVariables: string[] = [];
+
+    private nameAndValues: Map<string, string> = new Map();
 
     /**
      * Add a new environment variable to check
+     * @param variableName the name of the env variable to look for
+     * @param alias an alias to access it during the execution ;)
      */
-    add(variableName: string): void{
+    add(variableName: string, alias: string): void{
         this.envVariables.push(variableName);
+        if(alias != undefined) {
+            this.alias.set(alias, variableName);
+        }
     }
 
     /**
@@ -49,10 +51,11 @@ export class EnvStorage {
         }
     }
 
-    get(variableName: string): string {
-        let value = this.nameAndValues.get(variableName);
+    get(variableNameOrAlias: string): string {
+        let name = this.alias.get(variableNameOrAlias) != undefined?this.alias.get(variableNameOrAlias):variableNameOrAlias;
+        let value = this.nameAndValues.get(name!);
         if (value === undefined) {
-            throw new Error(`The index '${variableName}' does not exist.`);
+            throw new Error(`The index '${name}' does not exist.`);
         }
         return value;
     }
