@@ -1,0 +1,12 @@
+{
+  "name": "env-storage",
+  "version": "1.0.0",
+  "description": "Little library to handle environment variables",
+  "main": "index.js",
+  "author": "Baptiste Prunot",
+  "license": "MIT",
+  "private": false,
+  "devDependencies": {
+    "typescript": "^3.4.3"
+  }
+}
