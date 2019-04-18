@@ -5,7 +5,7 @@
 With this package you can register them at the beginning of your code, 
 And you will be able to safely access them later :slightly_smiling_face:
 
-Overall process
+### Overall process
 ```javascript
 let storage = new EnvStorage();
 storage.add('MY_VAR')
