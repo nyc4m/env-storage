@@ -1,6 +1,6 @@
 {
   "name": "env-storage",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Little library to handle environment variables",
   "main": "build/env-storage.js",
   "author": "Baptiste Prunot",
