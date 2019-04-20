@@ -5,6 +5,12 @@
 With this package you can register them at the beginning of your code, 
 And you will be able to safely access them later :slightly_smiling_face:
 
+### Installation
+
+```
+ npm install env-storage 
+```
+
 ### Overall process
 ```javascript
 let storage = new EnvStorage();
