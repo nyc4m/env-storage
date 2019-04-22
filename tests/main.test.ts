@@ -36,6 +36,14 @@ it('Read default value', () => {
     expect(storage.get('test')).toBe(value);
 });
 
+it('Read real value, not default', () => {
+    let value = 'this is a default value';
+    storage.add('TEST1', 'test', value);
+    storage.check();
+    expect(storage.get('test')).not.toBe(value);
+    expect(storage.get('test')).toBe('Hello World');
+});
+
 it('Read empty value', () => {
     storage.add('TEST2');
     expect(() => {
