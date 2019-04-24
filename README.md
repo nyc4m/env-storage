@@ -1,4 +1,5 @@
 # Env-storage
+[![Build Status](https://travis-ci.org/nyc4m/env-storage.svg?branch=master)](https://travis-ci.org/nyc4m/env-storage)
 
 **Stop** accessing environment variable from anywhere, there's an other way !
 
